@@ -3,14 +3,14 @@ import axios from "axios"
 import { useSearchParams } from "react-router-dom"
 import styles from "./styles.module.css"
 import Country from "./Country"
+import { Link } from "react-router-dom"
 
 
 export default function Countries() {
 
     const [loading , setisloading] =  useState(true)
     const [countries,setcountries] = useState([])
-    const [entry, setentry] = useState("")
-    const [searchcountry, setsearchcountry] = useState("")
+    
 
     // let entredserach = setsearchcountry(entry) ; 
 
@@ -28,13 +28,16 @@ export default function Countries() {
             setisloading(true)
             
         })
-    },[entry])
+    },[])
 
 
     return <div>
         <p className={styles.headertxt}  >Countries</p>
-        <input className={styles.input} type="text" name="country" id="country" onChange={(e)=>setentry(e.target.value)} placeholder="Serch country : " />
-        <button className={styles.btn} >search</button>
+
+        <div className={styles.btndiv} >
+        <Link className={styles.btn} to={"/search"} >Search</Link>
+        </div>
+       
 
 
         <div >
