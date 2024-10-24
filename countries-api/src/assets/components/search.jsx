@@ -1,0 +1,8 @@
+import styles from "./styles.module.css"
+import { useState } from "react"
+
+export default function Search() {
+    return <div>
+
+    </div>
+}
