@@ -7,7 +7,7 @@ export default function Country({loading, countries}) {
         {loading ? <p>Loading ...</p> : countries.map((item)=><div key={item.name.official} className={styles.card} >
             <img className={styles.image} src={item.flags.png} alt="" />
             <p className={styles.cardtxt}  >Name : {item.name.common} </p>
-            <p  className={styles.cardtxt} >capital city : {item.name.capital} </p>
+            <p  className={styles.cardtxt} >capital city : {item.capital} </p>
         </div>  )  }
         </div>
     </div>
